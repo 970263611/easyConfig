@@ -23,10 +23,6 @@ func main() {
 	if err != nil || node.Content == nil {
 		panic("yaml parse error")
 	}
-	err = yaml.Unmarshal(fileMessage, &node)
-	if err != nil || node.Content == nil {
-		panic("yaml parse error")
-	}
 	yamlFile := node.Content[fileIndex-1]
 	split := strings.Split(key, ".")
 	for i, v := range split {
